@@ -35,14 +35,4 @@ A responsive and interactive Eid experience built using HTML, CSS, and JavaScrip
 
 ---
 
-## 📁 Project Structure
-```
-eid-surprise-wheel/
-├── index.html      # HTML structure
-├── style.css       # Styling & animations
-└── script.js       # Game logic & WhatsApp integration
-```
-
----
-
 ## 🌙 Eid Mubarak to everyone! عيد مبارك
