@@ -276,11 +276,12 @@ function pickSeg() {
   return N - 1;
 }
 
-let spun = false, curAngle = 0;
+let spun = localStorage.getItem('eidSpun') === 'true', curAngle = 0;
 
 function spinWheel() {
   if (spun) return;
   spun = true;
+  localStorage.setItem('eidSpun', 'true');
 
   const btn = document.getElementById('spinBtn');
   btn.disabled    = true;
