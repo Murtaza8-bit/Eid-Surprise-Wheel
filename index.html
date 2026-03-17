@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Eid Mubarak 🌙</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Amiri:wght@400;700&family=Dancing+Script:wght@600;700&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+  <div id="particles"></div>
+
+  <!-- SCREEN 1: ENVELOPE -->
+  <div id="s1" class="screen active">
+    <div class="hdr">
+      <span class="moon">🌙</span>
+      <h1>Eid Mubarak</h1>
+      <p>Wishing you joy, blessings &amp; sweet surprises ✨</p>
+    </div>
+    <div class="env-wrap" id="envWrap" onclick="openEnvelope()">
+      <div class="env-svg-wrap" id="envSvgWrap">
+        <svg id="envSvg" xmlns="http://www.w3.org/2000/svg"></svg>
+      </div>
+      <p class="tap-hint">👆 Tap the envelope to open!</p>
+    </div>
+  </div>
+
+  <!-- SCREEN 2: GREETING -->
+  <div id="s2" class="screen">
+    <div class="hdr">
+      <span class="moon">🌙</span>
+      <h1>Eid Mubarak</h1>
+    </div>
+    <div class="greet-card">
+      <span class="greet-emoji">🌙✨</span>
+      <div class="arabic-txt">عيد مبارك</div>
+      <div class="greet-title">Eid Mubarak!</div>
+      <p class="greet-sub">May this blessed Eid bring you<br>happiness, health &amp; prosperity 🌹</p>
+      <div class="divider"></div>
+      <p class="eidi-tease">🎁 You've received an Eidi!<br>Spin to reveal your amount…</p>
+      <button class="btn-pink" onclick="showSpin()">🎡 Spin for your Eidi!</button>
+    </div>
+  </div>
+
+  <!-- SCREEN 3: SPIN -->
+  <div id="s3" class="screen">
+    <div class="hdr">
+      <span class="moon">🌙</span>
+      <h1>Eid Mubarak</h1>
+    </div>
+    <div class="spin-card">
+      <div class="spin-title">🎡 Spin the Eidi Wheel!</div>
+      <p class="spin-sub">One spin only — make it count! 💫</p>
+      <div class="wheel-wrap" id="wheelWrap">
+        <div class="pointer">▼</div>
+        <canvas id="wheel"></canvas>
+      </div>
+      <div class="spin-btn-row">
+        <button class="btn-gold" id="spinBtn" onclick="spinWheel()">✨ Spin Now!</button>
+      </div>
+      <p class="attempt-note" id="attemptNote">⚠️ You only get ONE attempt!</p>
+    </div>
+  </div>
+
+  <!-- RESULT OVERLAY -->
+  <div id="result-overlay">
+    <div class="result-box">
+      <span class="res-emoji" id="resEmoji">🎉</span>
+      <div class="res-amount" id="resAmount"></div>
+      <div class="res-label" id="resLabel"></div>
+      <p class="res-msg" id="resMsg"></p>
+      <div class="wa-box" id="waBox">
+        <span class="wa-icon">📱</span>
+        Screenshot lo aur WhatsApp par bhejo Eidi claim karne ke liye! 🎁
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
